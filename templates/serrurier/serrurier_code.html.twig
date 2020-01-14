@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %}Serrurier compétent à {% for ville in villes %}
+    {{ ville.nom }}{% endfor %} dans le
+    {% if villes.0.codepostal|length<5 %} {{ villes.0.codepostal }}
+{% else %}{{ codepostal }}{% endif %}{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1>Serrurier {% if villes.0.codepostal|length<5 %}{{ villes.0.codepostal }}
+            {% else %}{{ codepostal }}{% endif %}
+        </h1>
+    </div>
+{% endblock %}
+
