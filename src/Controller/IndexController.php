@@ -18,8 +18,11 @@ class IndexController extends AbstractController
         $search = new CodePostalSearch();
         $form=  $this->createForm(CodePostalSearchType::class,$search);
         $form->handleRequest($request);
-        return $this->render('index/index.html.twig', [
-            'controller_name' => 'IndexController','form'=>$form->createView()
-        ]);
+        if ($form->isSubmitted()&&$form->isValid()){
+        return $this->redirectToRoute('serrurier_code', ['codepostal'=>$request->query->get('searchCodePostal'),
+            'form'=>$form]);
+        }
+        return  $this->render('index/index.html.twig',['form'=>$form->createView()]);
     }
+
 }
