@@ -27,7 +27,7 @@ class SerrurierController extends AbstractController
     public function serrurierSearch(Request $request)
     {
         $search = new CodePostalSearch();
-        $form=  $this->createForm(CodePostalSearchType::class,$search);
+        $form=$this->createForm(CodePostalSearchType::class,$search);
         $form->handleRequest($request);
         return $this->redirectToRoute('serrurier_code', ['codepostal'=>$request->query->get('searchCodePostal'),
             'form'=>$form]);

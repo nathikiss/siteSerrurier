@@ -3,55 +3,62 @@
 {% block title %}Serrurier Ile de France{% endblock %}
 
 {% block body %}
+
     <!-- Banner -->
     <section id="banner">
-        <header>
-            <h2>Rechercher votre serrurier en Ile-de-France</h2>
+            <h1>Bienvenue chez ACS Serrurier</h1>
+            <h3>Trouvez un serrurier près de chez vous ?</h3>
             {{ form_start(form) }}
-
-            <div class="form-group">
-                {{ form_row(form.searchCodePostal,{'attr': {'class':'form-control form-control-lg'}})}}</div>
-            <button class="button">Rechercher</button>
-            {{ form_end(form) }}
-        </header>
+            <div id="container" class="container">
+                <div class="row">
+                    <div class="col-sm-10 offset-sm-1 text-center">
+                            <div class="form-group">
+                                {{ form_row(form.searchCodePostal,{'attr': {'class':'form-control form-control-lg'}})}}
+                            </div>
+                            <button class="button special">Rechercher</button>
+                            {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
     </section>
-
-    <!-- Intro -->
-    <section id="intro" class="container">
-        <div class="row">
-            <div class="col-4 col-12-medium">
-                <section class="first">
-                    <i class="icon solid featured fa-cog"></i>
-                    <header>
-                        <h2>Ipsum consequat</h2>
-                    </header>
-                    <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
-                </section>
-            </div>
-            <div class="col-4 col-12-medium">
-                <section class="middle">
-                    <i class="icon solid featured alt fa-bolt"></i>
-                    <header>
-                        <h2>Magna etiam dolor</h2>
-                    </header>
-                    <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
-                </section>
-            </div>
-            <div class="col-4 col-12-medium">
-                <section class="last">
-                    <i class="icon solid featured alt2 fa-star"></i>
-                    <header>
-                        <h2>Tempus adipiscing</h2>
-                    </header>
-                    <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
-                </section>
+    <section id="two" class="wrapper style1 special">
+        <div class="inner">
+            <header>
+                <h2>Ipsum Feugiat</h2>
+                <p>Semper suscipit posuere apede</p>
+            </header>
+            <div class="flex flex-4">
+                <div class="box person">
+                    <div class="image round">
+                        <img src="images/pic03.jpg" alt="Person 1" />
+                    </div>
+                    <h3>Magna</h3>
+                    <p>Cipdum dolor</p>
+                </div>
+                <div class="box person">
+                    <div class="image round">
+                        <img src="images/pic04.jpg" alt="Person 2" />
+                    </div>
+                    <h3>Ipsum</h3>
+                    <p>Vestibulum comm</p>
+                </div>
+                <div class="box person">
+                    <div class="image round">
+                        <img src="images/pic05.jpg" alt="Person 3" />
+                    </div>
+                    <h3>Tempus</h3>
+                    <p>Fusce pellentes</p>
+                </div>
+                <div class="box person">
+                    <div class="image round">
+                        <img src="images/pic06.jpg" alt="Person 4" />
+                    </div>
+                    <h3>Dolore</h3>
+                    <p>Praesent placer</p>
+                </div>
             </div>
         </div>
-        <footer>
-            <ul class="actions">
-                <li><a href="#" class="button large">Get Started</a></li>
-                <li><a href="#" class="button alt large">Learn More</a></li>
-            </ul>
-        </footer>
     </section>
+
+
 {% endblock %}

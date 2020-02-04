@@ -1,14 +1,39 @@
 {% extends 'base.html.twig' %}
+
 {% block title %}Serrurier compétent à {% for ville in villes %}
     {{ ville.nom }}{% endfor %} dans le
     {% if villes.0.codepostal|length<5 %} {{ villes.0.codepostal }}
 {% else %}{{ codepostal }}{% endif %}{% endblock %}
 
-{% block body %}
-    <div class="container mt-4">
-        <h1>Serrurier {% if villes.0.codepostal|length<5 %}{{ villes.0.codepostal }}
-            {% else %}{{ codepostal }}{% endif %}
-        </h1>
+{% block body %} <section id="two" class="wrapper style1 special">
+    <div class="inner">
+        <header>
+            <h2>Serrurier
+                {% if villes.1.codepostal is defined %}
+                    {% for ville in villes|slice(0,(villes|length)-1) %}
+                        {{ville.nom}},
+                    {% endfor %}
+                    {% for ville in villes|slice((villes|length)-1,villes|length) %}
+                       ou  {{ville.nom}} {{ ville.departement.nom }}
+                    {% endfor %}
+                {%else %}
+                {% for ville in villes %}
+                    {{ ville.departement.nom }}
+                    {% if ville.departement.nom != ville.nom %}
+                    à {{ ville.nom }}
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+                {% if villes.0.codepostal|length<5 %}{{ villes.0.codepostal }}
+                {% else %}{{ codepostal }}{% endif %}
+            </h2>
+        </header>
+        <div class="container mt-4">
+
+        </div>
     </div>
+</section>
+
+
 {% endblock %}
 

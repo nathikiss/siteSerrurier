@@ -5,65 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <title>{% block title %}Bienvenue !{% endblock %}</title>
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}"/>
-        <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
+        <noscript><link rel="stylesheet" href="{{ asset('assets/css/noscript.css') }}" /></noscript>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     {% endblock %}
 
 </head>
-<body class="is-preload">
-    <!-- Header -->
-    <section id="header">
-
-        <!-- Logo -->
-        <h1><a href="index.html"><img alt='' src="{{ asset('assets/css/images/acs_logo.png') }}"></a></h1>
-
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li class="current"><a href="index.html">Home</a></li>
-                <li>
-                    <a href="#">Dropdown</a>
-                    <ul>
-                        <li><a href="#">Lorem ipsum dolor</a></li>
-                        <li><a href="#">Magna phasellus</a></li>
-                        <li><a href="#">Etiam dolore nisl</a></li>
-                        <li>
-                            <a href="#">Phasellus consequat</a>
-                            <ul>
-                                <li><a href="#">Magna phasellus</a></li>
-                                <li><a href="#">Etiam dolore nisl</a></li>
-                                <li><a href="#">Veroeros feugiat</a></li>
-                                <li><a href="#">Nisl sed aliquam</a></li>
-                                <li><a href="#">Dolore adipiscing</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Veroeros feugiat</a></li>
-                    </ul>
-                </li>
-                <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                <li><a href="no-sidebar.html">No Sidebar</a></li>
-            </ul>
-        </nav>
+<nav class="navbar sticky-top navbar-light" style="background-color: #ffffff;">
+    <a class="navbar-brand" href="{{ path('index') }}">  <img src="{{ asset('images/serrurierACS.png') }}" width="110"/></a>
+</nav>
 
 
     {% block body %}
     {% endblock %}
     {% block footer %}
-        <section id="footer">
+        <footer id="footer">
             <div class="inner">
-                <ul class="copyright">
-                    <li>&copy; Untitled Inc. All rights reserved.</li>
-                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                </ul>
+                <div class="flex">
+                    <div class="copyright">
+                        &copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+                        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@lucamicheli?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Luca Micheli"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Luca Micheli</span></a>
+
+                    </div>
+                    <ul class="icons">
+                        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
+                        <li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
+                        <li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+                    </ul>
+                </div>
             </div>
-        </section>
+        </footer>
     {% endblock %}
 
 {% block javascripts %}
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ asset('assets/js/skel.min.js') }}"></script>
     <script src="{{ asset('assets/js/browser.min.js')}}"></script>
     <script src="{{ asset('assets/js/breakpoints.min.js') }}"></script>
     <script src="{{ asset('assets/js/util.js') }}"></script>

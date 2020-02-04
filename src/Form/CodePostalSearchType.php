@@ -8,6 +8,9 @@ use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Length;
+
+
 
 class CodePostalSearchType extends AbstractType
 {
@@ -18,7 +21,7 @@ class CodePostalSearchType extends AbstractType
                     'required'=>false,
                     'label'=>false,
                     'attr'=>[
-                        'placeholder'=>'Entrer votre CodePostal'
+                        'placeholder'=>'Entrez votre CodePostal'
                     ]
             ])
         ;
