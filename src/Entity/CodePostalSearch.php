@@ -14,7 +14,9 @@ class CodePostalSearch
 {
     /**
      * @var int|null
-     * @Assert\Regex("/^\w+/")
+     * @Assert\Length(min="5",max="5", maxMessage="Entrez un Code Postal à 5 chiffres",
+     *     minMessage="Entrez un Code Postal à 5 chiffres",charsetMessage="Entrez un Code Postal à 5 chiffres",
+     *     exactMessage="Entrez un Code Postal à 5 chiffres")
      */
     private $searchCodePostal;
 

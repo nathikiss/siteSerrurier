@@ -11,11 +11,35 @@
     {% endblock %}
 
 </head>
-<nav class="navbar sticky-top navbar-light" style="background-color: #ffffff;">
+
+
+<nav class="navbar sticky-top navbar-expand-sm navbar-light" style="background-color: #ffffff;">
     <a class="navbar-brand" href="{{ path('index') }}">  <img src="{{ asset('images/serrurierACS.png') }}" width="110"/></a>
+    <div class="topnav-right">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('index') }}" style="font-weight: bold">
+                <font size="+2" color="#1F2750" >Accueil
+                </font>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('index')}}#prestations " style="font-weight: bold" >
+                <font size="+2" color="#1F2750" >Nos Prestations
+                </font>
+            </a>
+        </li>
+        <li class="nav-item">
+           <a href="{{ path('index')}}#three">
+            <button class="btn btn-danger navbar-btn" style="width:180px;font-weight: bold">
+                <font size="+2"> Contact</font>
+            </button>
+            </a>
+        </li>
+
+    </ul>
+    </div>
 </nav>
-
-
     {% block body %}
     {% endblock %}
     {% block footer %}
@@ -23,23 +47,15 @@
             <div class="inner">
                 <div class="flex">
                     <div class="copyright">
-                        &copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-                        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@lucamicheli?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Luca Micheli"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Luca Micheli</span></a>
-
+                        &copy; ACS Serrurier Tous droits reservées. Conçu par Nathivel KISSITA | Design: <a href="https://templated.co">TEMPLATED</a>.
                     </div>
-                    <ul class="icons">
-                        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
-                        <li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
-                        <li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
-                    </ul>
                 </div>
             </div>
         </footer>
     {% endblock %}
 
 {% block javascripts %}
+    <script src="https://maps.google.com/maps/api/js?key=[AJOUTEZ_VOTRE_CLE_API_ICI]" type="text/javascript"></script>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/skel.min.js') }}"></script>
     <script src="{{ asset('assets/js/browser.min.js')}}"></script>

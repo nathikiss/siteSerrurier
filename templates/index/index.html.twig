@@ -7,7 +7,7 @@
     <!-- Banner -->
     <section id="banner">
             <h1>Bienvenue chez ACS Serrurier</h1>
-            <h3>Trouvez un serrurier près de chez vous ?</h3>
+            <h3>Rechercher un serrurier en Ile-de-France</h3>
             {{ form_start(form) }}
             <div id="container" class="container">
                 <div class="row">
@@ -15,7 +15,7 @@
                             <div class="form-group">
                                 {{ form_row(form.searchCodePostal,{'attr': {'class':'form-control form-control-lg'}})}}
                             </div>
-                            <button class="button special">Rechercher</button>
+                            <button class="btn btn-danger navbar-btn" style="font-weight: bold;width: 280px;font-size: 22px;">Rechercher</button>
                             {{ form_end(form) }}
                     </div>
                 </div>
@@ -24,41 +24,129 @@
     <section id="two" class="wrapper style1 special">
         <div class="inner">
             <header>
-                <h2>Ipsum Feugiat</h2>
-                <p>Semper suscipit posuere apede</p>
+                <h1 style="color: #000000" id="prestations">Nos prestations</h1>
+                <br>
+                <br>
+                <button class="btn btn-success btn-lg" style="font-weight: bold;width: 700px;font-size: 32px;">Interventions dans l'heure en cas d'urgence</button>
+                <br>
+                <br>
+                <button class="btn btn-info navbar-btn" style="font-weight: bold;width: 270px;font-size: 22px;">07 69 43 81 71
+                </button>
             </header>
             <div class="flex flex-4">
                 <div class="box person">
                     <div class="image round">
-                        <img src="images/pic03.jpg" alt="Person 1" />
+                        <img src="{{ asset('images/depannage_serrure.jpg') }}"alt="depannage_serrurier" />
                     </div>
-                    <h3>Magna</h3>
-                    <p>Cipdum dolor</p>
+                    <h3>Réparation</h3>
+                    <br>
+                    <p>24H/24H 7j/7</p>
+                    <p>Dépannage serrurier</p>
+                    <p>Déplacement rapide</p>
+                    <p>Changement de serrrure</p>
+                    <p>Remplacement de porte</p>
+                    <p>Travaux de serrurie</p>
+                    <p>Barillet bloqué</p>
+
                 </div>
                 <div class="box person">
                     <div class="image round">
-                        <img src="images/pic04.jpg" alt="Person 2" />
+                        <img src="{{ asset('images/porteclaquee.jpg') }}" alt="porte_claquee" />
                     </div>
-                    <h3>Ipsum</h3>
-                    <p>Vestibulum comm</p>
+                    <h3>Ouverture porte claquée</h3>
+                    <br>
+                    <p>Porte claquée </p>
+                    <p>Clé bloquée </p>
+                    <p>Clé cassée</p>
+                    <p>Intervention rapide</p>
+                    <p>Ouverture de porte</p>
+                    <p>Urgence</p>
                 </div>
                 <div class="box person">
                     <div class="image round">
-                        <img src="images/pic05.jpg" alt="Person 3" />
+                        <img src="{{ asset('images/blindage_de_porte.jpg') }}" alt="blindage_de_porte" />
                     </div>
-                    <h3>Tempus</h3>
-                    <p>Fusce pellentes</p>
+                    <h3>Installation</h3>
+                    <br>
+                    <p>Installation de porte blindée</p>
+                    <p>Blindage de porte</p>
+                    <p>Pose de serrure</p>
+                    <p>Porte blindée de maison</p>
+                    <p>Porte blindée d'appartement</p>
+
                 </div>
                 <div class="box person">
                     <div class="image round">
-                        <img src="images/pic06.jpg" alt="Person 4" />
+                        <img src="{{ asset('images/poignee_de_main.jpg') }}" alt="poignee_de_main" />
                     </div>
-                    <h3>Dolore</h3>
-                    <p>Praesent placer</p>
+                    <h3>Conseils</h3>
+                    <br>
+                    <p>Des serruriers aimables, qualifiés et pas chers</p>
+                    <p>Près de chez vous, en Île-de-France</p>
+                    <p>Prêt à partager leur savoir et leurs astuces avec leurs clients </p>
+                    <p>Des artisans intervenant sur toutes sortes de portes,
+                        de serrures de n'importe quelle marque</p>
                 </div>
+            </div>
+            <br>
+            <br>
+            <button class="btn btn-success btn-lg" style="font-weight: bold;width: 700px;font-size: 32px;">Devis Gratuit !</button>
+            <br>
+            <br>
+            <button class="btn btn-info navbar-btn" style="font-weight: bold;width: 270px;font-size: 22px;">07 69 43 81 71
+            </button>
+        </div>
+    </section>
+    <!-- Three -->
+    <section id="three" class="wrapper special">
+        <div class="inner">
+            <header class="align-center">
+                <h2 style="color: black">Contact</h2>
+            </header>
+            <div class="flex flex-2">
+                <article>
+                    <header>
+                        <h3 style="color: black">Contactez-nous dès maintenant</h3>
+                    </header>
+                    <br>
+                    <footer>
+                        <button class="btn btn-danger navbar-btn" style="font-weight: bold;width: 270px;font-size: 22px;">07 69 43 81 71
+                        </button>
+                    </footer>
+                    <br><br>
+                    <p style="color: #000000;">Vous êtes bloqué devant votre porte d'entrée, vos clés sont à l'intérieur ou perdus.
+                        Un cambrioleur à forcer votre serrure. Votre porte est cassée ou en mauvaise état.
+                        N'attendez plus, appelez nos artisans serruriers. Des serruriers qui n'effectuent que
+                        des interventions rapides et efficaces avec un bon rapport qualité/prix</p>
+                    <p  style="color: #000000;">Nos serruriers sont aptes à travailler sur n'importe quel type de serrure
+                        de n'importe quelle marque (Voir image ci-contre).
+                        Nous intervenons dans toute l'Île-de-France en vous
+                        proposant des serruriers proches de chez vous dans le 75 à <a href="{{ path('serrurier_code', {codepostal: 75000}) }}">Paris</a>
+                        , le <a href="{{ path('serrurier_code', {codepostal: 77000}) }}">77</a>, le <a href="{{ path('serrurier_code', {codepostal: 91000}) }}">78</a>.
+                        Dans toutes les villes du 91 comme <a href="{{ path('serrurier_code', {codepostal: 91000}) }}">Ris-Orangis</a>.
+                        Les villes telles que <a href="{{ path('serrurier_code', {codepostal: 92200}) }}">Neuilly-Sur-Seine</a> dans 92,
+                        <a href="{{ path('serrurier_code', {codepostal: 93000}) }}">Saint-Denis</a>
+                        dans le 93 mais aussi dans le <a href="{{ path('serrurier_code', {codepostal: 94000}) }}">94</a>
+                        et le <a href="{{ path('serrurier_code', {codepostal: 95000}) }}">95</a></p>
+                    <p>Pour de plus ample informations ou pour effectuer dès maintenant un Devis Gratuit,
+                        appelez nous au numéro ci-dessus</p>
+                    <button class="btn btn-success btn-lg" style="font-weight: bold;width: 500px;font-size: 22px;">
+                        Intervention Rapide 24H/24H  7j/7 !!</button>
+                </article>
+
+                <article>
+                    <div class="image fit">
+                        <br>
+                        <br>
+                        <img src="{{ asset('images/smartphone.jpg') }}" style="width: 70%" alt="smartphone"/>
+                    </div>
+                    <div class="image fit">
+                        <br>
+                        <br>
+                        <img src="{{ asset('images/marques_serrure.png') }}"  style="width: 70%" alt="marque"/>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
-
-
 {% endblock %}
